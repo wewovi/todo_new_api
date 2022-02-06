@@ -81,7 +81,7 @@ app.patch('/todo/:todoId',async (req, res)=>{
     }});
     res.json({
         data: updateTodo,
-        message: "Todo successfully updated"
+        message: "Todo updated successfully"
     })
 }catch (err) {
     res.json({
