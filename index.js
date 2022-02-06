@@ -75,9 +75,9 @@ res.json({
 app.patch('/todo/:todoId',async (req, res)=>{
     try{
     const updateTodo = await todoModel.findOneAndUpdate({_id: req.params.todoId},{$set:{
-        title: req.body.title,
-        status: req.body.status,
-        body: req.body.body
+        
+        status: req.params.status,
+       
     }});
     res.json({
         data: updateTodo,
